@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- Le digo al navegador que este documento es HTML5 -->
+<html lang="es">
+<head>
+  <!-- Codificación para que acepte acentos y caracteres especiales -->
+  <meta charset="UTF-8" />
+
+  <!-- Hace que la página sea responsive (se vea bien en celular, tablet, etc.) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Título que aparece en la pestaña del navegador -->
+  <title>Gestor de Tareas</title>
+
+  <!-- Enlace al archivo CSS donde están los estilos -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Contenedor principal de toda la app -->
+  <!-- Me sirve para centrar y agrupar todo el gestor -->
+  <main class="container">
+
+    <!-- Título principal de la aplicación -->
+    <h1>Gestor de Tareas</h1>
+
+    <!-- Sección donde el usuario escribe y agrega tareas -->
+    <section class="controls">
+
+      <!-- Input donde el usuario escribe la nueva tarea -->
+      <!-- autocomplete="off" evita sugerencias del navegador -->
+      <input
+        type="text"
+        id="nueva-tarea"
+        placeholder="Escribe tu tarea..."
+        autocomplete="off"
+      />
+
+      <!-- Botón que dispara la acción de agregar tarea -->
+      <button id="agregar-tarea" type="button">
+        Agregar Tarea
+      </button>
+    </section>
+
+    <!-- Aquí muestro mensajes al usuario (errores o avisos) -->
+    <!-- aria-live sirve para accesibilidad (lectores de pantalla) -->
+    <p id="mensaje" class="mensaje" aria-live="polite"></p>
+
+    <!-- Lista donde se agregan dinámicamente las tareas -->
+    <ul id="lista-tareas" class="lista-tareas"></ul>
+
+  </main>
+
+  <!-- Conecto el archivo JavaScript -->
+  <!-- Va al final para que el HTML cargue primero -->
+  <script src="app.js"></script>
+</body>
+</html>
